@@ -1,5 +1,5 @@
 # Wi6CSI
-Exploring WiFi 6GHz for CSI-Based Sensing: A New Dataset for Indoor Activity Recognition
+Wi6CSI: A Human Activity Recognition Dataset for Next-Generation WiFi Sensing in the 6 GHz Band
 
 ## Wi6CSI Dataset Overview
 
@@ -22,13 +22,7 @@ Exploring WiFi 6GHz for CSI-Based Sensing: A New Dataset for Indoor Activity Rec
 - **Wi-Fi Band:**  
   - Utilizes the **6GHz** frequency band, providing enhanced granularity and improved sensing accuracy compared to lower frequency bands.
 
-## Wi6CSI Dataset
-
-This repository contains a sample subset of the complete Wi6CSI dataset containing just a few single user activities. The sample is provided to demonstrate the dataset structure and typical processing steps for research in Wi-Fi Channel State Information (CSI) analysis.
-If you are interested in obtaining access to the complete Wi6CSI dataset or have any questions, please contact: [e0426004@u.nus.edu](mailto:e0426004@u.nus.edu)
-The complete dataset has been uploaded to the Hugging Face link below.
-
-👉 **[WiFi 6GHz Dataset Sample on Hugging Face](https://huggingface.co/datasets/kentridgeai/Wi6CSI)**
+👉 **[WiFi 6GHz Dataset on Hugging Face](https://huggingface.co/datasets/kentridgeai/Wi6CSI)**
 
 ### Dataset Contents
 
@@ -42,7 +36,7 @@ The complete dataset has been uploaded to the Hugging Face link below.
   These files hold raw Wi-Fi CSI data. They are not immediately usable and must be parsed using the [picoscenes toolbox](https://ps.zpj.io/matlab.html) to extract the relevant features for analysis.
 
 ### Single User Activity Recognition Structure
-| Activity                        |
+| **Activity**                    |
 |---------------------------------|
 | Empty Room (A1)                 |
 | Standing Still (A2)             |
@@ -58,24 +52,80 @@ The complete dataset has been uploaded to the Hugging Face link below.
 | Walk (Parallel) (A12)           |
 | Jump (A13)                      |
 
-| Location                        |
+| **Location**                    |
 |---------------------------------|
 | Room (L1)                       |
 | Extended Room (L2)              |
 | Meeting Room (L3)               |
 
-| Trial Number                    |
+| **Trial Number**                |
 |---------------------------------|
 | Trial 1 (T1)                    |
 | Trial 2 (T2)                    |
 | Trial 3 (T3)                    |
 | Trial 4 (T4)                    |
-| Trial 5 (T5)                    |
 
-| Participant Number              |
+| **Participant Number**          |
 |---------------------------------|
 | Participant 1 (P1)              |
 | Participant 2 (P2)              | 
 | Participant 3 (P3)              |
 | Participant 4 (P4)              |
 | Participant 5 (P5)              |
+
+### Multi User Interaction Structure
+| **Scenario No.** | **Participant P1**     | **Participant P2**     | **Participant P3**       |
+|------------------|------------------------|------------------------|--------------------------|
+| S1               | (A5) Clap              | (A6) Wave              | (A7) Arm Circles         |
+| S2               | (A10) Bicep Curls      | (A2) Standing Still    | (A6) Wave                |
+| S3               | (A3) Sitting Still     | (A10) Bicep Curls      | (A6) Wave                |
+|------------------|------------------------|------------------------|--------------------------|
+| S4               | (A13) Jump             | (A12) Walk (Parallel)  | (A5) Clap                |
+| S5               | (A10) Bicep Curls      | (A9) Squats            | (A12) Walk (Parallel)    |
+| S6               | (A9) Squats            | (A6) Wave              | (A2) Standing Still      |
+|------------------|------------------------|------------------------|--------------------------|
+| S7               | (A14) High Five        | (A14) High Five        | (A6) Wave                |
+| S8               | (A15) Passing Object   | (A15) Passing Object   | (A12) Walk (Parallel)    |
+| S9               | (A16) Handshake        | (A16) Handshake        | (A5) Clap                |
+
+| **Location**                    |
+|---------------------------------|
+| Meeting Room (L3)               |
+
+| **Trial Number**                |
+|---------------------------------|
+| Trial 1 (T1)                    |
+| Trial 2 (T2)                    |
+| Trial 3 (T3)                    |
+| Trial 4 (T4)                    |
+
+| **Participant Number**          |
+|---------------------------------|
+| Participant 1 (P1)              |
+| Participant 2 (P2)              | 
+| Participant 3 (P3)              |
+
+### People Counting Structure
+| **Scenario No.** | **Details**                                                     |
+|------------------|-----------------------------------------------------------------|
+| S10              | Sitting relatively still while using a mobile phone and talking |
+| S11              | Standing and mingling with other participants                   |
+
+| **Location**                    |
+|---------------------------------|
+| Meeting Room (L3)               |
+
+| **Trial Number**                |
+|---------------------------------|
+| Trial 1 (T1)                    |
+| Trial 2 (T2)                    |
+| Trial 3 (T3)                    |
+| Trial 4 (T4)                    |
+
+| **Number of Participants** | **Participant Numbers** |
+|----------------------------|-------------------------|
+| 1 (N1)                     | P1                      |
+| 2 (N2)                     | P1, P2                  |
+| 3 (N3)                     | P1, P2, P3              |
+| 4 (N4)                     | P1, P2, P3, P4          |
+| 5 (N5)                     | P1, P2, P3, P4, P5      |
