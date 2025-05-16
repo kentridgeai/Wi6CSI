@@ -22,12 +22,13 @@ Exploring WiFi 6GHz for CSI-Based Sensing: A New Dataset for Indoor Activity Rec
 - **Wi-Fi Band:**  
   - Utilizes the **6GHz** frequency band, providing enhanced granularity and improved sensing accuracy compared to lower frequency bands.
 
-## Wi6CSI Sample Dataset
+## Wi6CSI Dataset
 
 This repository contains a sample subset of the complete Wi6CSI dataset containing just a few single user activities. The sample is provided to demonstrate the dataset structure and typical processing steps for research in Wi-Fi Channel State Information (CSI) analysis.
 If you are interested in obtaining access to the complete Wi6CSI dataset or have any questions, please contact: [e0426004@u.nus.edu](mailto:e0426004@u.nus.edu)
+The complete dataset has been uploaded to the Hugging Face link below.
 
-👉 **[WiFi 6GHz Dataset Sample on Hugging Face](https://huggingface.co/datasets/WIFI6GHZDATASET/WiFi_6GHz_Dataset)**
+👉 **[WiFi 6GHz Dataset Sample on Hugging Face](https://huggingface.co/datasets/kentridgeai/Wi6CSI)**
 
 ### Dataset Contents
 
